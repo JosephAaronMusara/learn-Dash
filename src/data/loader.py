@@ -18,5 +18,5 @@ def load_transaction_data(path:str) -> pd.DataFrame:
         parse_dates=[DataSchema.DATE]
     )
     data[DataSchema.YEAR] = data[DataSchema.DATE].dt.year.astype(str)
-    data[DataSchema.YEAR] = data[DataSchema.DATE].dt.month.astype(str)
+    data[DataSchema.MONTH] = data[DataSchema.DATE].dt.month.astype(str)
     return data
